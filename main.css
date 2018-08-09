@@ -58,7 +58,7 @@ nav {
 .header{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 80vh;
+  height: 400px;
   margin-top: 40px;
 }
 
@@ -66,12 +66,12 @@ nav {
   margin-top: 20px;
 }
 
-#section-one {
-  height: 80vh;;
-}
+/* #section-one {
+  height: 400px;;
+} */
 
 section {
-  height: 80vh;
+  height: 550px;
   font-family: Roboto;
   font-size: 15px;
   text-align: center;
@@ -86,18 +86,30 @@ section:nth-child(odd) {
   color: #1F2D3D;
 }
 
-#section-two > div {
+.products-one { 
   width: 300px;
   height: 300px;
   border: 1px solid black;
-  display: inline-block;
-  background-color: #816C61;
-  /* border-radius: 25%; */
+  display: inline-flex;
+  background-color: #816C61; 
+  /* border-radius: 25%; */ 
 }
 
-footer {
+.products-two { 
+  width: 300px;
+  height: 30px;
+  border: 1px solid black;
+  display: inline-flex;
   background-color: #816C61;
-  color: #1F2D3D;
+  text-align: center;
+  /* border-radius: 25%;  */
+}
+
+
+
+footer {
+  background-color: #131B23;
+  color: #EE964B;
   height: 200px;
   font-family: Roboto;
   font-size: 35px;
@@ -113,7 +125,22 @@ footer {
 	text-align: center;
 }
 
+.wrapper-two {
+  display: flex;
+}
 
+.wrapper-two {
+  flex: 1;
+  text-align: center;
+}
+
+/* .product-images{
+  display: inline-flex;
+}
+
+.product-images-boder{
+  border: 1px black inset;
+} */
 /* .show {
   animation-name: fadeIn;
   animation-duration: 600ms;
@@ -123,3 +150,33 @@ footer {
  /* .menu {
   margin-top: 30px;
 } */
+
+section {
+  /* height: 800px;
+  padding: 0;
+  margin: 0; */
+
+  /* set the opacity to 0 to start */
+  opacity: 0;
+}
+
+/* 
+  set the fadeIn keyframe to the fadeIn class
+    this animation runs for .6 seconds
+*/
+section.fadeIn {
+  animation: fadeIn .6s forwards;
+}
+
+/* the fadeIn keyframe */
+@keyframes fadeIn {
+
+  /* keyframes must have at least two intervals from/to or 0%/100% */
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
